@@ -1,2 +1,2 @@
 # gregdelozier.github.io
-Greg DeLozier's Pages
+Greg DeLozier's (momentarily empty) GitHub Pages
