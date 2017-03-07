@@ -3,5 +3,5 @@
 Is this cool or what? 
 
 ## Kent State
-[Software Engineering Methodologoy (SWE)](http:./kent.md)
+[Software Engineering Methodology (SWE)](http:./kent.md)
 
