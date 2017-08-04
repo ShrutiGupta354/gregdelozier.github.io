@@ -3,5 +3,5 @@
 Is this cool or what? 
 
 ## Kent State
-[Kent State Courses](http:./kent.md)
+[Kent State Courses](http:./kent)
 
