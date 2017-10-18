@@ -1,0 +1,79 @@
+<html>
+<head>
+  <title>Title</title>
+  <style> body { font-family: 'Courier'; } </style>
+</head>
+<body><textarea id="source" style="display:none">
+
+class: center, middle
+
+# Advanced Database Systems Design
+
+## Slides
+
+## Code
+
+---
+
+# Slides
+
+1. 
+
+---
+
+# Code
+
+1. 
+
+---
+
+# Testing Abstractions
+
+1. Unit tests for each function
+2. Use the parts that work to test the next parts
+3. It's OK to use ordinary unit tests here 
+4. Make the tests as technology-agnostic as possible
+5. Coding time...
+
+---
+
+# Using Abstractions
+
+1. Recode web operations using these functions
+2. Don't be afraid to refine abstractions
+3. Keep database knowledge out of web app
+
+---
+
+# Before Abstraction
+
+```
+@post('/edit/<id:int>')
+def post_edit(id):
+    updated_task = request.POST.task.strip()
+    conn = sqlite3.connect('todo.db')
+    c = conn.cursor()
+    c.execute("UPDATE todo SET task = ? WHERE id LIKE ?", (updated_task,id))
+    new_id = c.lastrowid
+    conn.commit()
+    c.close()
+    redirect("/tasks")
+```
+
+---
+
+# After Abstraction 
+
+```
+@post('/edit/<id:int>')
+def post_edit(id):
+    updated_task = request.POST.task.strip()
+    database.update_task(id, updated_task)
+    redirect("/tasks")
+```
+---
+
+</textarea></body>
+<script src="remark.js"></script>
+<script>var slideshow = remark.create();</script>
+</html>
